@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Table</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="content">
+    <div class="tableInput">
+        <div>
+            <input name="inputField" type="text" id="inputField" placeholder="Task name">
+            <select name="priority" id="priority">
+                <option value="">PRIORITY</option>
+                <option value="Low">LOW</option>
+                <option value="Medium">MEDIUM</option>
+                <option value="High">HIGH</option>
+            </select>
+            <button id="addButton">ADD</button>
+        </div>
+        <div id="message"></div>
+    </div>
+    <div class="tableContent">
+        <table id="tableData">
+            <tr class="tableHeader">
+                <td id="sortByTaskName">Task name<span id="sortIcon"></span></td>
+                <td>Priority</td>
+                <td>Done</td>
+            </tr>
+        </table>
+    </div>
+    <div class="tableFooter">
+        <span class="label">Rows per page: </span>
+        <select name="paginationValue" id="paginationValue">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+        <span id="rowsFrom"></span>
+        <span>-</span>
+        <span id="rowsTo"></span>
+        <span>of</span>
+        <span id="numberOfRows"></span>
+        <span id="prevPage">
+            <span class="prevPage"></span>
+        </span>
+        <span id="nextPage">
+            <span class="nextPage"></span>
+        </span>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
